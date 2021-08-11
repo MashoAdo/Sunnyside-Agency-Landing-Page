@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Fraunces, sans-serif;
+}
+
+.show-menu {
+  right: 0;
+}
+
+body {
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+header {
+  background: url(../images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 2rem;
+  color: white;
+  height: 100vh;
+}
+
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  font-weight: 900;
+  font-family: barlow, sans-serif;
+}
+
+.menu-items {
+  position: relative;
+  right: -110%;
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  padding: 2rem 0;
+  z-index: 10;
+  position: relative;
+  -webkit-transform: all 0.5s ease-in;
+          transform: all 0.5s ease-in;
+}
+
+.menu-items a {
+  color: #5a636c;
+  font-family: Barlow, sans-serif;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.menu-items button {
+  background: #fad400;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-family: Fraunces, sans-serif;
+  font-weight: 700;
+}
+
+.menu-items::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid white;
+  border-left: 25px solid transparent;
+}
+
+.header-info {
+  text-align: center;
+  position: relative;
+  top: -200px;
+}
+
+.header-info h1 {
+  letter-spacing: 10px;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.header-info h1 span {
+  display: block;
+}
+
+.header-info img {
+  height: 150px;
+  position: relative;
+  top: 90px;
+}
+
+.about1-image img {
+  width: 100%;
+  height: auto;
+}
+
+.about2-image img {
+  width: 100%;
+  height: auto;
+}
+
+.about-information {
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-information h2 {
+  margin: 2rem;
+  color: #23303e;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.about-information h2 span {
+  display: block;
+}
+
+.about-information p {
+  color: #818498;
+  font-family: Barlow, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.learn-more {
+  font-weight: 900;
+  color: #23303e;
+  margin-bottom: 2rem;
+}
+
+.about1-learn {
+  position: relative;
+}
+
+.about1-learn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  border-radius: 50px;
+  z-index: -10;
+}
+
+.about1-learn::after {
+  background: #fad400;
+}
+
+.about2-learn {
+  position: relative;
+}
+
+.about2-learn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  border-radius: 50px;
+  z-index: -10;
+}
+
+.about2-learn::after {
+  background: #fe7867;
+}
+
+.service-article1 {
+  background: url(../images/mobile/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+  position: relative;
+  color: #25564b;
+}
+
+.service-article1 div {
+  padding: 2rem;
+  position: absolute;
+  bottom: 4rem;
+}
+
+.service-article1 div h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.service-article1 div p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-family: Barlow, sans-serif;
+  font-weight: 900;
+}
+
+.service-article2 {
+  background: url(../images/mobile/image-photography.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+  position: relative;
+  color: #19536b;
+}
+
+.service-article2 div {
+  padding: 2rem;
+  position: absolute;
+  bottom: 4rem;
+}
+
+.service-article2 div h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.service-article2 div p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-family: Barlow, sans-serif;
+  font-weight: 900;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.testimonials h4 {
+  color: #a7abae;
+  letter-spacing: 8px;
+  font-size: 1.2rem;
+}
+
+.testimonial-items {
+  margin: 2rem 0;
+}
+
+.testimonial-items article {
+  margin-top: 5rem;
+}
+
+.testimonial-items article img {
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  width: 100px;
+  height: 100px;
+}
+
+.testimonial-items article p {
+  color: #818498;
+  font-family: Barlow, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-items article h5 {
+  color: #23303e;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-items article span {
+  color: #a7abae;
+  font-family: Barlow, sans-serif;
+}
+
+#projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+}
+
+#projects img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  color: #25564b;
+  background: #458c7e;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.footer-menu {
+  margin: 4rem 0;
+}
+
+.footer-menu a {
+  color: #25564b;
+  font-family: Barlow, sans-serif;
+  font-size: 1.3rem;
+}
+
+.footer-menu a:nth-child(2) {
+  margin: 0 4rem;
+}
+
+.socials {
+  margin-bottom: 2rem;
+}
+
+.socials a {
+  color: #25564b;
+  font-size: 1.8rem;
+}
+
+.socials a:not(:last-child) {
+  margin-right: 1.5rem;
+}
+/*# sourceMappingURL=styles.css.map */
