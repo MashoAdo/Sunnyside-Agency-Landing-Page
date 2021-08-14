@@ -13,7 +13,7 @@
   <!-- ion icons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+
 
 </head>
 
@@ -24,13 +24,15 @@
         <div class="logo">
           <h1>sunnyside</h1>
         </div>
-        <div class="menu-btn" id="menu-btn"><img src="./src/images/icon-hamburger.svg" alt="icon-hamburger"></div>
+        <div class="menu-btn" id="menu-btn">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
       </div>
 
       <ul class="menu-items" id="menu-items">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
+        <a href="#about" class="menu-item">About</a>
+        <a href="#services" class="menu-item">Services</a>
+        <a href="#projects" class="menu-item">Projects</a>
         <button>CONTACT</button>
       </ul>
     </nav>
@@ -42,29 +44,40 @@
   </header>
 
   <section id="about">
-    <article>
-      <div class="about1-image">
-        <img src="./src/images/mobile/image-transform.jpg" alt="image-transform">
-      </div>
-      <div class="about-information">
-        <h2>Transform your <span>brand</span></h2>
-        <p>We are a full-service creative agency specializing in helping brands grow fast.
-          Engage your clients through compelling visuals that do most of the marketing for you.
-        </p>
-        <h1 class="learn-more "><span class="about1-learn">LEARN MORE</span></h1>
-      </div>
-    </article>
 
-    <article>
-      <div class="about2-image"><img src="./src/images/mobile/image-stand-out.jpg" alt="image-stand-out"></div>
-      <div class="about-information">
-        <h2>Stand out to the right audience</h2>
-        <p> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
-          we’ll build
-          and extend your brand in digital places.</p>
-        <h1 class="learn-more "> <span class="about2-learn">LEARN MORE</span></h1>
-      </div>
-    </article>
+    <div class="about1-image">
+      <picture>
+        <source media="(min-width: 700px)" srcset="./src/images/desktop/image-transform.jpg">
+        <source media="(max-width: 699px)" srcset="./src/images/mobile/image-transform.jpg">
+        <img src="./src/images/mobile/image-transform.jpg" alt="cone">
+      </picture>
+    </div>
+    <div class="about-information info1">
+      <h2>Transform your <span>brand</span></h2>
+      <p>We are a full-service creative agency specializing in helping brands grow fast.
+        Engage your clients through compelling visuals that do most of the marketing for you.
+      </p>
+      <h1 class="learn-more "><span class="about1-learn">LEARN MORE</span></h1>
+    </div>
+
+
+
+    <div class="about2-image">
+      <picture>
+        <source media="(min-width: 700px)" srcset="./src/images/desktop/image-stand-out.jpg">
+        <source media="(max-width: 699px)" srcset="./src/images/mobile/image-stand-out.jpg">
+        <img src="./src/images/mobile/image-stand-out.jpg" alt="image-stand-out">
+      </picture>
+
+    </div>
+    <div class="about-information">
+      <h2>Stand out to the right audience</h2>
+      <p> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
+        we’ll build
+        and extend your brand in digital places.</p>
+      <h1 class="learn-more "> <span class="about2-learn">LEARN MORE</span></h1>
+    </div>
+
   </section>
 
   <section id="services">
