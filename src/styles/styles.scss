@@ -92,9 +92,11 @@ $body-padding: 2rem;
 		}
 	}
 }
-// JS CLASSES
-.show-menu {
-	right: 0;
+@mixin flexCenter($direction, $justify) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: center;
 }
 
 //======================BODY CSS===============================
@@ -112,55 +114,60 @@ header {
 }
 
 .top-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+	@include flexCenter(row, space-between);
 }
 .logo {
 	font-weight: map-get($font-weight, "Extra-bold");
 	font-family: barlow, sans-serif;
 }
+.menu-btn {
+	font-size: 2rem;
+}
+@media screen and (max-width: 799px) {
+	.menu-items {
+		position: relative;
+		right: -110%;
+		margin-top: 2.5rem;
+		@include flexCenter(column, center);
+		background: $White;
+		padding: 2rem 0;
+		z-index: 10;
+		position: relative;
+		transform: all 0.5s ease-in;
+		a {
+			color: $Very-dark-grayish-blue;
+			font-family: Barlow, sans-serif;
+			font-weight: map-get($font-weight, "Semi-bold");
+			margin-bottom: 2rem;
+		}
 
-.menu-items {
-	position: relative;
-	right: -110%;
-	margin-top: 2.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: $White;
-	padding: 2rem 0;
-	z-index: 10;
-	position: relative;
-	transform: all 0.5s ease-in;
-	a {
-		color: $Very-dark-grayish-blue;
-		font-family: Barlow, sans-serif;
-		font-weight: map-get($font-weight, "Semi-bold");
-		margin-bottom: 2rem;
-	}
-	button {
-		background: $Yellow;
-		border: none;
-		border-radius: 50px;
-		padding: 1rem 2rem;
-		font-family: Fraunces, sans-serif;
-		font-weight: map-get($font-weight, "Bold");
-	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: -25px;
-		right: 0;
-		width: 0;
-		height: 0;
-		border-bottom: 25px solid $White;
-		border-left: 25px solid transparent;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -25px;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-bottom: 25px solid $White;
+			border-left: 25px solid transparent;
+		}
 	}
 }
-
+button {
+	background: $Yellow;
+	border: none;
+	border-radius: 50px;
+	padding: 1rem 2rem;
+	font-family: Fraunces, sans-serif;
+	font-weight: map-get($font-weight, "Bold");
+	&:hover {
+		background: $Grayish-blue;
+		color: $White;
+	}
+}
+.show-menu {
+	right: 0;
+}
 .header-info {
 	text-align: center;
 	position: relative;
@@ -176,7 +183,7 @@ header {
 	img {
 		height: 150px;
 		position: relative;
-		top: 90px;
+		top: 50px;
 	}
 }
 
@@ -197,11 +204,12 @@ header {
 .about-information {
 	text-align: center;
 	padding: $body-padding;
+	@include flexCenter(column, center);
 	h2 {
 		margin: 2rem;
 		color: $Very-dark-desaturated-blue;
 		font-weight: map-get($font-weight, "Extra-bold");
-		font-size: 2.5rem;
+		font-size: 2rem;
 		span {
 			display: block;
 		}
@@ -209,7 +217,7 @@ header {
 	p {
 		color: $Dark-grayish-blue;
 		font-family: Barlow, sans-serif;
-		font-size: 1.5rem;
+		font-size: 1.1rem;
 		line-height: 1.5;
 		margin-bottom: 2rem;
 	}
@@ -235,11 +243,13 @@ header {
 // =========SERVICES============
 .service-article1 {
 	background: url(../images/mobile/image-graphic-design.jpg);
+	@include backgroundPosition();
 	@include service-article();
 	color: $Dark-desaturated-cyan;
 }
 .service-article2 {
 	background: url(../images/mobile/image-photography.jpg);
+	@include backgroundPosition();
 	@include service-article();
 	color: $Dark-blue;
 }
@@ -247,8 +257,7 @@ header {
 // =========TESTIMONIALS============
 .testimonials {
 	text-align: center;
-	padding: 4rem $body-padding;
-	// color: $Dark-moderate-cyan;
+	padding: 4rem 0;
 	h4 {
 		color: $Grayish-blue;
 		letter-spacing: 8px;
@@ -256,7 +265,7 @@ header {
 	}
 }
 .testimonial-items {
-	margin: 2rem 0;
+	margin: 2rem $body-padding;
 	article {
 		margin-top: 5rem;
 		img {
@@ -268,7 +277,7 @@ header {
 		p {
 			color: $Dark-grayish-blue;
 			font-family: Barlow, sans-serif;
-			font-size: 1.3rem;
+			font-size: 1.1rem;
 			line-height: 1.5;
 			margin-bottom: 1.5rem;
 		}
@@ -309,7 +318,7 @@ footer {
 		font-family: Barlow, sans-serif;
 		font-size: 1.3rem;
 		&:nth-child(2) {
-			margin: 0 4rem;
+			margin: 0;
 		}
 	}
 }
@@ -321,5 +330,110 @@ footer {
 		&:not(:last-child) {
 			margin-right: 1.5rem;
 		}
+	}
+}
+
+// ======================MEDIA QUERIES==============
+
+@media screen and (min-width: 800px) {
+	header {
+		background: url(../images/desktop/image-header.jpg);
+		// height: 1000px;
+		@include backgroundPosition();
+	}
+	.menu-btn {
+		display: none;
+	}
+	.header-info {
+		top: 120px;
+		h1 {
+			span {
+				display: inline;
+			}
+		}
+	}
+	nav {
+		@include flexCenter(row, space-between);
+	}
+	.menu-item {
+		color: $White;
+		margin-right: 2rem;
+		font-size: 1.3rem;
+		font-family: Barlow, sans-serif;
+	}
+	button {
+		background: $White;
+	}
+	// about
+	#about {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+
+		h2 {
+			margin: 0 0 1rem;
+			font-size: 2rem;
+			span {
+				display: inline;
+			}
+		}
+		p {
+			font-size: 1.2rem;
+		}
+	}
+	.about1-image {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+	.info1 {
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	// services
+	#services {
+		position: relative;
+		top: -5px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+	}
+	.service-article1 {
+		background: url(../images/desktop/image-graphic-design.jpg);
+		@include backgroundPosition();
+	}
+	.service-article2 {
+		background: url(../images/desktop/image-photography.jpg);
+		@include backgroundPosition();
+	}
+
+	// testimonials
+	.testimonial-items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		article {
+			margin: 1.5rem;
+		}
+	}
+
+	// projects
+	#projects {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	header,
+	.about-information,
+	.service-article1,
+	.service-article2 {
+		padding: 2rem 5rem;
+	}
+	.testimonials {
+		padding: 4rem 5rem;
 	}
 }
