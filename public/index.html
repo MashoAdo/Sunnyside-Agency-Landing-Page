@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <title>Sunnyside agency landing page</title>
+
+  <!-- style sheet -->
+  <link rel="stylesheet" href="./src/styles/styles.css">
+
+  <!-- ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="top-nav">
+        <div class="logo">
+          <h1>sunnyside</h1>
+        </div>
+        <div class="menu-btn" id="menu-btn">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </div>
+
+      <ul class="menu-items" id="menu-items">
+        <a href="#about" class="menu-item">About</a>
+        <a href="#services" class="menu-item">Services</a>
+        <a href="#projects" class="menu-item">Projects</a>
+        <button>CONTACT</button>
+      </ul>
+    </nav>
+
+    <div class="header-info">
+      <h1>WE ARE<span> CREATIVES</span></h1>
+      <div><img src="./src/images/icon-arrow-down.svg" alt=""></div>
+    </div>
+  </header>
+
+  <section id="about">
+
+    <div class="about1-image">
+      <picture>
+        <source media="(min-width: 700px)" srcset="./src/images/desktop/image-transform.jpg">
+        <source media="(max-width: 699px)" srcset="./src/images/mobile/image-transform.jpg">
+        <img src="./src/images/mobile/image-transform.jpg" alt="cone">
+      </picture>
+    </div>
+    <div class="about-information info1">
+      <h2>Transform your <span>brand</span></h2>
+      <p>We are a full-service creative agency specializing in helping brands grow fast.
+        Engage your clients through compelling visuals that do most of the marketing for you.
+      </p>
+      <h1 class="learn-more "><span class="about1-learn">LEARN MORE</span></h1>
+    </div>
+
+
+
+    <div class="about2-image">
+      <picture>
+        <source media="(min-width: 700px)" srcset="./src/images/desktop/image-stand-out.jpg">
+        <source media="(max-width: 699px)" srcset="./src/images/mobile/image-stand-out.jpg">
+        <img src="./src/images/mobile/image-stand-out.jpg" alt="image-stand-out">
+      </picture>
+
+    </div>
+    <div class="about-information">
+      <h2>Stand out to the right audience</h2>
+      <p> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
+        we’ll build
+        and extend your brand in digital places.</p>
+      <h1 class="learn-more "> <span class="about2-learn">LEARN MORE</span></h1>
+    </div>
+
+  </section>
+
+  <section id="services">
+    <article class="service-article1">
+      <div>
+        <h3>Graphic Design</h3>
+        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures
+          potential
+          clients’ attention.</p>
+      </div>
+    </article>
+
+    <article class="service-article2">
+      <div>
+        <h3>Photography</h3>
+        <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section class="testimonials">
+    <h4>CLIENT TESTIMONIALS</h4>
+
+    <div class="testimonial-items">
+      <article>
+        <img src="./src/images/image-emily.jpg" alt="image-emily"></img>
+        <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
+          hit.
+        </p>
+        <h5>Emily R.</h5>
+        <span>Marketing Director</span>
+      </article>
+
+      <article>
+        <img src="./src/images/image-thomas.jpg" alt="image-thomas"></img>
+        <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
+          enjoyable
+          experience.</p>
+        <h5>Thomas S.</h5>
+        <span>Chief Operating Officer</span>
+      </article>
+
+      <article>
+        <img src="./src/images/image-jennie.jpg" alt="image-jennie"></img>
+        <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+        <h5>Jennie F.</h5>
+        <span>Business Owner</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <img src=" ./src/images/mobile/image-gallery-milkbottles.jpg" alt="image-gallery-milkbottles">
+
+    <img src="./src/images/mobile/image-gallery-orange.jpg" alt="image-gallery-orange">
+
+    <img src="./src/images/mobile/image-gallery-cone.jpg" alt="cone">
+
+    <img src="./src/images/mobile/image-gallery-sugar-cubes.jpg" alt="image-gallery-sugar-cubes">
+  </section>
+
+  <footer>
+    <div class="logo">
+      <h1>sunnyside</h1>
+    </div>
+
+    <ul class="footer-menu">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">projects</a>
+    </ul>
+
+    <div class="socials">
+      <ul>
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-pinterest"></ion-icon>
+        </a>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./src/main.js"></script>
+</body>
+
+</html>
