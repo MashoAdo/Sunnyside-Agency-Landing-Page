@@ -472,7 +472,7 @@ footer {
   }
   #services {
     position: relative;
-    top: -5px;
+    top: -6px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
